@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="buttons">
+        <button (click)="getAllStudents()" mat-raised-button color="primary">Get All Students</button>
+    </div>
+    
+    <div class="card">
+        <mat-list *ngFor="let sm of something" role="list">
+            <mat-list-item role="listitem">
+                <mat-card class="card">{{sm}}
+                </mat-card>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>
