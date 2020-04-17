@@ -1,6 +1,32 @@
 <div class="container">
+
+    <div class="intputs">
+        <p>Id</p>
+        <mat-form-field>
+            <input [(ngModel)]="resultProfile.id" matInput>
+        </mat-form-field>
+        <p>Name</p>
+        <mat-form-field>
+            <input [(ngModel)]="resultProfile.name" matInput>
+        </mat-form-field>
+        <p>{{resultProfile.date}}</p>
+        <p>Positive</p>
+        <mat-form-field>
+            <input [(ngModel)]="positiveStr" matInput >
+        </mat-form-field>
+        <p>Test Type</p>
+        <mat-form-field>
+            <input [(ngModel)]="resultProfile.testType" matInput >
+        </mat-form-field>        
+    </div>
+
     <div class="buttons">
-        <button (click)="getAllStudents()" mat-raised-button color="primary">Get All Students</button>
+        <button (click)="getAllResults()" mat-raised-button color="primary">Get All Results</button>
+        <button (click)="postNewDefaultResult()" mat-raised-button color="primary">Set New Default Result</button>
+        <button (click)="postNewResult()" mat-raised-button color="warn">Set New Result</button>
+        <button (click)="patchResult()" mat-raised-button color="warn">Edit Result</button>
+
+
     </div>
     
     <div class="card">
